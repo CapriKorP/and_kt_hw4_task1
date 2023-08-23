@@ -176,7 +176,7 @@ class MainKtTest {
 
         val result = calculate("", zeroMonthLimit, 10)
 
-        assertEquals("Ошибка перевода!!!!",result)
+        assertEquals("Ошибка перевода!!!!!",result)
     }
 
 

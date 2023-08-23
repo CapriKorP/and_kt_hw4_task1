@@ -142,40 +142,39 @@ class MainKtTest {
     //Тесты Visa
     @Test
     fun calculate_commissionVisa() {
-        val transaction = 15000
-        val result = calculate(visa, zeroMonthLimit, transaction)
+
+        val result = calculate(visa, zeroMonthLimit, 15000)
 
         assertEquals("Комиссия составила 112 руб.",result)
     }
 
     @Test
     fun calculate_minimalCommissionVisa() {
-        val transaction = 10
-        val result = calculate(visa, zeroMonthLimit, transaction)
+
+        val result = calculate(visa, zeroMonthLimit, 10)
 
         assertEquals("Комиссия составила 35 руб.",result)
     }
-
+//Mir
     @Test
     fun calculate_commissionMir() {
-        val transaction = 15000
-        val result = calculate(mir, zeroMonthLimit, transaction)
+        val result = calculate(mir, zeroMonthLimit, 15000)
 
         assertEquals("Комиссия составила 112 руб.",result)
     }
 
     @Test
     fun calculate_minimalCommissionMir() {
-        val transaction = 10
-        val result = calculate(mir, zeroMonthLimit, transaction)
+        val result = calculate(mir, zeroMonthLimit, 10)
 
         assertEquals("Комиссия составила 35 руб.",result)
     }
 
+    //Error
     @Test
     fun calculate_error() {
-        val transaction = 10
-        val result = calculate("", zeroMonthLimit, transaction)
+
+        val result = calculate("", zeroMonthLimit, 10)
 
         assertEquals("Ошибка перевода!!!!!",result)
     }
